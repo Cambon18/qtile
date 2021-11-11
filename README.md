@@ -1,3 +1,4 @@
 # Configs
 rofi
 brightnessctl
+feh
