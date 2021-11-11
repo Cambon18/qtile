@@ -1,1 +1,3 @@
 # Configs
+rofi
+brightnessctl
