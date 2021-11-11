@@ -2,3 +2,4 @@
 rofi
 brightnessctl
 feh
+xorg-xinit
