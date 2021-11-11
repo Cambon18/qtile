@@ -1,15 +1,7 @@
 
-from libqtile import hook
 from libqtile.config import Key
 from libqtile.command import lazy
-from os import path
-import subprocess
 
-## Autostart
-
-@hook.subscribe.startup_once
-def autostart():
-  subprocess.call([os.path.expanduser('~/.config/qtile/autostart.sh')])
 
 ## Atajos de teclado
 
