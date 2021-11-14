@@ -1,4 +1,4 @@
-# Configs
+# Qtile de CambonOS
 rofi
 brightnessctl
 feh
