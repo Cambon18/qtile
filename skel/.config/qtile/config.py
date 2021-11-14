@@ -40,7 +40,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   # Browser
   ([mod], "b", lazy.spawn("firefox")),
   # File Explorer
-  ([mod], "e", lazy.spawn("thunar")),
+  ([mod], "f", lazy.spawn("thunar")),
   # Terminal
   ([mod], "Return", lazy.spawn("alacritty")),
   # Volume
