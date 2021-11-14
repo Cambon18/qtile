@@ -19,7 +19,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   # Cambiar posicion ventana
   ([mod, "shift"], "j", lazy.layout.shuffle_down()),
   ([mod, "shift"], "k", lazy.layout.shuffle_up()),
-  # Cambiar ventana de pantalla
+  # Cambiar distribucion de ventanas
   ([mod], "Tab", lazy.next_layout()),
   ([mod, "shift"], "Tab", lazy.prev_layout()),
   # Cerrar ventana
