@@ -23,17 +23,26 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   ([mod], "k", lazy.layout.up()),
   ([mod], "h", lazy.layout.left()),
   ([mod], "l", lazy.layout.right()),
+  ([mod], "down", lazy.layout.down()),
+  ([mod], "up", lazy.layout.up()),
+  ([mod], "left", lazy.layout.left()),
+  ([mod], "right", lazy.layout.right()),
   # Cambiar tamaño ventana
   ([mod, "shift"], "l", lazy.layout.grow()),
   ([mod, "shift"], "h", lazy.layout.shrink()),
+  ([mod, "shift"], "right", lazy.layout.grow()),
+  ([mod, "shift"], "left", lazy.layout.shrink()),
   # Cambiar posicion ventana
   ([mod, "shift"], "j", lazy.layout.shuffle_down()),
   ([mod, "shift"], "k", lazy.layout.shuffle_up()),
+  ([mod, "shift"], "down", lazy.layout.shuffle_down()),
+  ([mod, "shift"], "up", lazy.layout.shuffle_up()),
   # Cambiar distribucion de ventanas
   ([mod], "Tab", lazy.next_layout()),
   ([mod, "shift"], "Tab", lazy.prev_layout()),
   # Cerrar ventana
   ([mod], "w", lazy.window.kill()),
+  ([mod, "shift"], "q", lazy.window.kill()),
   # Cambiar de pantalla
   ([mod], "period", lazy.next_screen()),
   ([mod], "comma", lazy.prev_screen()),
@@ -44,9 +53,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   # Line de comandos en el panel
   ([mod], "r", lazy.spawncmd()),
   # Menu
-  ([mod], "m", lazy.spawn("rofi -show drun")),
+  ([mod], "d", lazy.spawn("rofi -show drun")),
   # Listar ventanas
-  ([mod, "shift"], "m", lazy.spawn("rofi -show")),
+  ([mod, "shift"], "d", lazy.spawn("rofi -show")),
+  # Menu ssh
+  ([mod], "s", lazy.spawn("rofi -show ssh")),
   # Browser
   ([mod], "b", lazy.spawn("firefox")),
   # File Explorer
@@ -54,15 +65,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   # Terminal
   ([mod], "Return", lazy.spawn("alacritty")),
   # Volume
-  ([], "XF86AudioLowerVolume", lazy.spawn(
-      "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-  )),
-  ([], "XF86AudioRaiseVolume", lazy.spawn(
-      "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-  )),
-  ([], "XF86AudioMute", lazy.spawn(
-      "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-  )),
+  ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+  ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+  ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
   # Brightness
   ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
   ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
