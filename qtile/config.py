@@ -59,7 +59,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   # Menu ssh
   ([mod], "s", lazy.spawn("rofi -show ssh")),
   # Browser
-  ([mod], "b", lazy.spawn("firefox")),
+  ([mod], "b", lazy.spawn("brave")),
   # File Explorer
   ([mod], "f", lazy.spawn("thunar")),
   # Terminal
