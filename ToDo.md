@@ -1,3 +1,0 @@
-- [ ] Grupos de traballo
-- [ ] Configurar pantallas
-- [ ] Configurar barra
