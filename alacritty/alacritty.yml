@@ -1,5 +1,7 @@
-# Colors (Horizon Dark)
+# Transparencia fondo
 background_opacity: 0.75
+
+# Colors (Horizon Dark)
 colors:
   # Primary colors
   primary:
