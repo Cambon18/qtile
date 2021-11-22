@@ -17,55 +17,55 @@ def autostart():
 
 mod = "mod4"
 
-keys = [Key(key[0], key[1], *key[2:]) for key in [
+keys = [
   # Cambiar entre ventanas
-  ([mod], "j", lazy.layout.down()),
-  ([mod], "k", lazy.layout.up()),
-  ([mod], "h", lazy.layout.left()),
-  ([mod], "l", lazy.layout.right()),
+  Key([mod], "j", lazy.layout.down()),
+  Key([mod], "k", lazy.layout.up()),
+  Key([mod], "h", lazy.layout.left()),
+  Key([mod], "l", lazy.layout.right()),
   # Cambiar tamaño ventana
-  ([mod, "shift"], "l", lazy.layout.grow()),
-  ([mod, "shift"], "h", lazy.layout.shrink()),
+  Key([mod, "shift"], "l", lazy.layout.grow()),
+  Key([mod, "shift"], "h", lazy.layout.shrink()),
   # Cambiar posicion ventana
-  ([mod, "shift"], "j", lazy.layout.shuffle_down()),
-  ([mod, "shift"], "k", lazy.layout.shuffle_up()),
+  Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
+  Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
   # Cambiar distribucion de ventanas
-  ([mod], "Tab", lazy.next_layout()),
-  ([mod, "shift"], "Tab", lazy.prev_layout()),
+  Key([mod], "Tab", lazy.next_layout()),
+  Key([mod, "shift"], "Tab", lazy.prev_layout()),
   # Cerrar ventana
-  ([mod], "w", lazy.window.kill()),
-  ([mod, "shift"], "q", lazy.window.kill()),
+  Key([mod], "w", lazy.window.kill()),
+  Key([mod, "shift"], "q", lazy.window.kill()),
   # Cambiar de pantalla
-  ([mod], "period", lazy.next_screen()),
-  ([mod], "comma", lazy.prev_screen()),
+  Key([mod], "period", lazy.next_screen()),
+  Key([mod], "comma", lazy.prev_screen()),
   # Reiniciar Qtile
-  ([mod, "control"], "r", lazy.restart()),
+  Key([mod, "control"], "r", lazy.restart()),
   # Cerrar Qtile
-  ([mod, "control"], "q", lazy.shutdown()),
+  Key([mod, "control"], "q", lazy.shutdown()),
   # Bloquear pantalla
-  ([mod, "control"], "l", lazy.spawm("light-locker-command -l")),
+  Key([mod, "control"], "l", lazy.spawm("light-locker-command -l")),
   # Linea de comandos en el panel
-  ([mod], "r", lazy.spawncmd()),
+  Key([mod], "r", lazy.spawncmd()),
   # Menu
-  ([mod], "d", lazy.spawn("rofi -show drun")),
+  Key([mod], "d", lazy.spawn("rofi -show drun")),
   # Listar ventanas
-  ([mod, "shift"], "d", lazy.spawn("rofi -show")),
+  Key([mod, "shift"], "d", lazy.spawn("rofi -show")),
   # Menu ssh
-  ([mod], "s", lazy.spawn("rofi -show ssh")),
+  Key([mod], "s", lazy.spawn("rofi -show ssh")),
   # Browser
-  ([mod], "b", lazy.spawn("brave")),
+  Key([mod], "b", lazy.spawn("brave")),
   # File Explorer
-  ([mod], "f", lazy.spawn("thunar")),
+  Key([mod], "f", lazy.spawn("thunar")),
   # Terminal
-  ([mod], "Return", lazy.spawn("alacritty")),
+  Key([mod], "Return", lazy.spawn("alacritty")),
   # Volume
-  ([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
-  ([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
-  ([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+  Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+  Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+  Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
   # Brightness
-  ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
-  ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
-]]
+  Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
+  Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
+]
 
 ## Teclas raton
 
@@ -132,7 +132,6 @@ screens = [
 
 main = None
 dgroups_key_binder = None
-dgroups_app_rules = []
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = True
