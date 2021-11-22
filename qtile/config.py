@@ -1,9 +1,9 @@
 
-from libqtile import hook
+from libqtile import hook, layout
 from os import path
 import subprocess
 
-from libqtile.config import Key
+from libqtile.config import Key, Group, Drag, Click
 from libqtile.command import lazy
 
 ## Autostart
@@ -23,20 +23,12 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   ([mod], "k", lazy.layout.up()),
   ([mod], "h", lazy.layout.left()),
   ([mod], "l", lazy.layout.right()),
-#  ([mod], "down", lazy.layout.down()),
-#  ([mod], "up", lazy.layout.up()),
-#  ([mod], "left", lazy.layout.left()),
-#  ([mod], "right", lazy.layout.right()),
   # Cambiar tamaño ventana
   ([mod, "shift"], "l", lazy.layout.grow()),
   ([mod, "shift"], "h", lazy.layout.shrink()),
-#  ([mod, "shift"], "right", lazy.layout.grow()),
-#  ([mod, "shift"], "left", lazy.layout.shrink()),
   # Cambiar posicion ventana
   ([mod, "shift"], "j", lazy.layout.shuffle_down()),
   ([mod, "shift"], "k", lazy.layout.shuffle_up()),
-#  ([mod, "shift"], "down", lazy.layout.shuffle_down()),
-#  ([mod, "shift"], "up", lazy.layout.shuffle_up()),
   # Cambiar distribucion de ventanas
   ([mod], "Tab", lazy.next_layout()),
   ([mod, "shift"], "Tab", lazy.prev_layout()),
@@ -50,7 +42,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   ([mod, "control"], "r", lazy.restart()),
   # Cerrar Qtile
   ([mod, "control"], "q", lazy.shutdown()),
-  # Line de comandos en el panel
+  # Bloquear pantalla
+  ([mod, "control"], "l", lazy.spawm("light-locker-command -l")),
+  # Linea de comandos en el panel
   ([mod], "r", lazy.spawncmd()),
   # Menu
   ([mod], "d", lazy.spawn("rofi -show drun")),
@@ -72,7 +66,103 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
   ([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),
   ([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-")),
 ]]
+
+## Teclas raton
+
+mouse = [
+    Drag(
+        [mod],
+        "Button1",
+        lazy.window.set_position_floating(),
+        start=lazy.window.get_position()
+    ),
+    Drag(
+        [mod],
+        "Button3",
+        lazy.window.set_size_floating(),
+        start=lazy.window.get_size()
+    ),
+    Click([mod], "Button2", lazy.window.bring_to_front())
+]
+
+## Grupos
+
+groups = [Group(i) for i in [
+    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+]]
+
+for i, group in enumerate(groups):
+    actual_key = str(i + 1)
+    keys.extend([
+        # Switch to workspace N
+        Key([mod], actual_key, lazy.group[group.name].toscreen()),
+        # Send window to workspace N
+        Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
+    ])
+
+## Distribuciones de ventanas
+
+layouts = [
+    layout.Max(),
+    layout.MonadTall(),
+    layout.MonadWide(),
+    layout.Bsp(),
+    layout.Matrix(),
+    layout.RatioTile(),
+    layout.Columns(),
+    layout.Tile(),
+    layout.TreeTab(),
+    layout.VerticalTile(),
+    layout.Zoomy(),
+]
+
+## Pantalla y panel
+
+def separator():
+    return widget.Sep(linewidth=0, padding=5)
   
+def icon(fg='text', bg='dark', fontsize=16, text="?"):
+    return widget.TextBox(
+        fontsize=fontsize,
+        text=text,
+        padding=3
+    )
+
+screens = [Screen(top=status_bar(
+  separator(),
+  widget.GroupBox(
+      font='MesloLGS-NF-Regular',
+      fontsize=19,
+      margin_y=3,
+      margin_x=0,
+      padding_y=8,
+      padding_x=5,
+      borderwidth=1,
+      rounded=False,
+      highlight_method='block',
+      urgent_alert_method='block',
+      disable_drag=True
+  ),
+  separator(),
+  widget.WindowName(fontsize=14, padding=5),
+  separator(),
+  icon(text=' '),
+  widget.CheckUpdates(
+      no_update_string='0',
+      display_format='{updates}',
+      update_interval=1800,
+      custom_command='checkupdates',
+  ),
+  separator(),
+  widget.CurrentLayoutIcon(scale=0.65),
+  widget.CurrentLayout(padding=5),
+  separator(),
+  widget.Systray(padding=5),
+  separator(),
+  icon(fontsize=17, text=' '),
+  widget.Clock(format='%d/%m/%Y - %H:%M '),
+))]
+
 ## Variables
 
 main = None
