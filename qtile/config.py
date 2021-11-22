@@ -1,5 +1,5 @@
 
-from libqtile import hook, layout
+from libqtile import hook, layout, Screen, bar, widget
 from os import path
 import subprocess
 
@@ -115,6 +115,18 @@ layouts = [
     layout.VerticalTile(),
     layout.Zoomy(),
 ]
+
+## Definimos Barra
+
+screens = [
+  Screen(
+    bottom=bar.Bar([
+      widget.GroupBox(),
+      widget.WindowName(),
+      widget.Battery()
+      ], 30))
+]
+
 
 ## Variables
 
