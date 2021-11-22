@@ -116,53 +116,6 @@ layouts = [
     layout.Zoomy(),
 ]
 
-## Pantalla y panel
-
-def separator():
-    return widget.Sep(linewidth=0, padding=5)
-  
-def icon(fg='text', bg='dark', fontsize=16, text="?"):
-    return widget.TextBox(
-        fontsize=fontsize,
-        text=text,
-        padding=3
-    )
-
-screens = [Screen(top=status_bar(
-  separator(),
-  widget.GroupBox(
-      font='MesloLGS-NF-Regular',
-      fontsize=19,
-      margin_y=3,
-      margin_x=0,
-      padding_y=8,
-      padding_x=5,
-      borderwidth=1,
-      rounded=False,
-      highlight_method='block',
-      urgent_alert_method='block',
-      disable_drag=True
-  ),
-  separator(),
-  widget.WindowName(fontsize=14, padding=5),
-  separator(),
-  icon(text=' '),
-  widget.CheckUpdates(
-      no_update_string='0',
-      display_format='{updates}',
-      update_interval=1800,
-      custom_command='checkupdates',
-  ),
-  separator(),
-  widget.CurrentLayoutIcon(scale=0.65),
-  widget.CurrentLayout(padding=5),
-  separator(),
-  widget.Systray(padding=5),
-  separator(),
-  icon(fontsize=17, text=' '),
-  widget.Clock(format='%d/%m/%Y - %H:%M '),
-))]
-
 ## Variables
 
 main = None
