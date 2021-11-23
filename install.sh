@@ -6,3 +6,4 @@ trizen --noconfirm -Sy qtile rofi brightnessctl pulseadio pavucontrol feh brave-
 sudo mkdir /etc/skel/.config
 sudo cp -r qtile /etc/skel/.config
 sudo cp -r alacritty /etc/skel/.config
+echo "qtile start" > /etc/skel/.xprofile
