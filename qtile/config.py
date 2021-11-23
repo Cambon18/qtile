@@ -12,7 +12,7 @@ from libqtile.command import lazy
 def autostart():
   home = path.expanduser('~')
   subprocess.Popen([home + '/.config/qtile/autostart.sh'])
-
+org-xinit
 ## Atajos de teclado
 
 mod = "mod4"
@@ -120,10 +120,9 @@ layouts = [
 
 screens = [
   Screen(
-    bottom=bar.Bar([
+    top=bar.Bar([
       widget.GroupBox(),
       widget.WindowName(),
-      widget.Battery()
       ], 30))
 ]
 
