@@ -6,13 +6,6 @@ import subprocess
 from libqtile.config import Key, Group, Drag, Click, Screen
 from libqtile.command import lazy
 
-## Autostart
-
-@hook.subscribe.startup_once
-def autostart():
-  home = path.expanduser('~')
-  subprocess.Popen([home + '/.config/qtile/autostart.sh'])
-
 ## Atajos de teclado
 
 mod = "mod4"
