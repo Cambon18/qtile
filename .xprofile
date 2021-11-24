@@ -1,4 +1,4 @@
-feh --bg-fill /usr/share/backgrounds/playa-de-las-catedrales.jpg
-nm-applet &
-volumeicon &
-cbatticon &
+feh -z --bg-fill ~/Imágenes/backgrounds
+nm-applet
+volumeicon
+cbatticon
