@@ -1,4 +1,3 @@
 feh -z --bg-fill ~/Imágenes/backgrounds
-nm-applet & ; sleep 0.1
-volumeicon & ; sleep 0.1
-cbatticon & ; sleep 0.1
+nm-applet &
+volumeicon &
