@@ -6,4 +6,5 @@ sudo mkdir /etc/skel/.config
 sudo cp -r qtile /etc/skel/.config
 sudo cp -r alacritty /etc/skel/.config
 sudo cp -r .xprofile /etc/skel
+sudo cp -r Imágenes /etc/skel
 sudo systemctl enable lightdm.service
