@@ -116,6 +116,8 @@ screens = [
     top=bar.Bar([
       widget.GroupBox(),
       widget.WindowName(),
+      widget.CurrentLayoutIcon(),
+      widget.CurrentLayout(),
       widget.Systray()
       ], 30))
 ]
