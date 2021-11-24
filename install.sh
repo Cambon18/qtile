@@ -5,3 +5,4 @@ trizen --noconfirm -Sy xorg xorg-server xorg-xrandr arandr qtile rofi brightness
 sudo mkdir /etc/skel/.config
 sudo cp -r qtile /etc/skel/.config
 sudo cp -r alacritty /etc/skel/.config
+sudo cp -r .xprofile /etc/skel
