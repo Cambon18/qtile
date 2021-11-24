@@ -22,6 +22,8 @@ keys = [
   # Cambiar posicion ventana
   Key([mod, "shift"], "j", lazy.layout.shuffle_down()),
   Key([mod, "shift"], "k", lazy.layout.shuffle_up()),
+  # Cambiar a flotante una ventana
+  Key([mod, "shift"], "f", lazy.window.toggle_floating()),
   # Cambiar distribucion de ventanas
   Key([mod], "Tab", lazy.next_layout()),
   Key([mod, "shift"], "Tab", lazy.prev_layout()),
