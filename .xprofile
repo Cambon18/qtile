@@ -1,4 +1,4 @@
 feh -z --bg-fill ~/Imágenes/backgrounds
-nm-applet
-volumeicon
-cbatticon
+nm-applet &
+volumeicon &
+cbatticon &
