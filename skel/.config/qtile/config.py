@@ -98,15 +98,15 @@ for i, group in enumerate(groups):
 layouts = [
     layout.Max(),
     layout.MonadTall(),
-    layout.MonadWide(),
+#    layout.MonadWide(),
     layout.Bsp(),
     layout.Matrix(),
-    layout.RatioTile(),
-    layout.Columns(),
-    layout.Tile(),
-    layout.TreeTab(),
-    layout.VerticalTile(),
-    layout.Zoomy(),
+#    layout.RatioTile(),
+#    layout.Columns(),
+#    layout.Tile(),
+#    layout.TreeTab(),
+#    layout.VerticalTile(),
+#    layout.Zoomy(),
 ]
 
 ## Definimos Barra
