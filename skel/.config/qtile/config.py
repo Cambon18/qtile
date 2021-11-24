@@ -96,11 +96,11 @@ for i, group in enumerate(groups):
 ## Distribuciones de ventanas
 
 layouts = [
-    layout.Max(),
     layout.MonadTall(),
+    layout.Max(),
 #    layout.MonadWide(),
-    layout.Bsp(),
     layout.Matrix(),
+    layout.Bsp(),
 #    layout.RatioTile(),
 #    layout.Columns(),
 #    layout.Tile(),
@@ -114,9 +114,9 @@ layouts = [
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(),
+      widget.GroupBox(fontsize=21),
       widget.WindowName(),
-      widget.CurrentLayoutIcon(),
+      widget.CurrentLayoutIcon(scale=0.5),
       widget.CurrentLayout(),
       widget.Systray()
       ], 30))
