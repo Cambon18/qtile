@@ -117,7 +117,7 @@ layouts = [
 ## Definimos Barra
 
 config = {
-    'font': 'Catedrall',
+    'font': 'Cantarell',
     'fontsize': 17
 }
 
