@@ -1,0 +1,7 @@
+configuration {
+ modi: "window,drun,ssh,run";
+ font: "Cantarell 12";
+ icon-theme: "ePapirus-Dark";
+ show-icons: true;
+ }
+@theme "/usr/share/rofi/themes/android_notification.rasi"
