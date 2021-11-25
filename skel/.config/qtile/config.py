@@ -82,7 +82,7 @@ mouse = [
 ## Grupos
 
 groups = [Group(i) for i in [
-    " 1:  "," 2:  ", " 3:  ", " 4  ", " 5  ", " 6  ", " 7  ", " 8  ", " 9  ", 
+    "1: ","2: ", "3: ", "4: ", "5: ", "6: ", "7: ",
 ]]
 
 for i, group in enumerate(groups):
@@ -99,7 +99,7 @@ for i, group in enumerate(groups):
 layout_conf = {
     'border_focus': '#39FF14',
     'border_width': 1,
-    'margin': 4
+    'margin': 7
 }
 
 layouts = [
@@ -121,7 +121,7 @@ layouts = [
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(fontsize=20),
+      widget.GroupBox(fontsize=18),
       widget.WindowName(),
       widget.CurrentLayoutIcon(scale=0.5),
       widget.CurrentLayout(),
