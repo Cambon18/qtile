@@ -97,12 +97,18 @@ for i, group in enumerate(groups):
 
 ## Distribuciones de ventanas
 
+layout_conf = {
+    'border_focus': '#39FF14',
+    'border_width': 1,
+    'margin': 4
+}
+
 layouts = [
-    layout.MonadTall(),
+    layout.MonadTall(**layout_conf),
     layout.Max(),
 #    layout.MonadWide(),
-    layout.Matrix(),
-    layout.Bsp(),
+    layout.Matrix(**layout_conf),
+    layout.Bsp(**layout_conf),
 #    layout.RatioTile(),
 #    layout.Columns(),
 #    layout.Tile(),
