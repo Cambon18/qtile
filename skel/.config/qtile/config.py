@@ -121,7 +121,7 @@ layouts = [
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(fontsize=21),
+      widget.GroupBox(fontsize=20),
       widget.WindowName(),
       widget.CurrentLayoutIcon(scale=0.5),
       widget.CurrentLayout(),
