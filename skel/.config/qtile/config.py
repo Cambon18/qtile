@@ -1,7 +1,6 @@
 
 from libqtile import hook, layout, bar, widget
 from os import path
-import subprocess
 
 from libqtile.config import Key, Group, Drag, Click, Screen
 from libqtile.command import lazy
