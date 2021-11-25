@@ -126,7 +126,7 @@ screens = [
       widget.CurrentLayoutIcon(scale=0.5),
       widget.CurrentLayout(),
       widget.Systray(),
-      widget.Battery(discharge_char='',charge_char='',full_char='',empty_char='',format='{char}  {percent:2.0%}',update_interval=1),
+      widget.Battery(discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',update_interval=1),
       widget.Clock()
       ], 30)),
 ]
