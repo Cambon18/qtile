@@ -116,18 +116,25 @@ layouts = [
 
 ## Definimos Barra
 
+config = {
+    'font': 'Catedrall',
+    'fontsize': 17
+}
+
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(fontsize=18,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
-      widget.WindowName(),
-      widget.CurrentLayoutIcon(scale=0.5),
-      widget.CurrentLayout(),
-      widget.Systray(),
-      widget.Battery(discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',update_interval=1),
-      widget.Clock()
+      widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+      widget.WindowName(**config),
+      widget.CheckUpdates(**config,display_format=" {updates}",no_update_string=" Updated"),
+      widget.CurrentLayoutIcon(scale=0.6),
+      widget.CurrentLayout(**config),
+      widget.Systray(icon_size=25),
+      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',update_interval=1),
+      widget.Clock(**config)
       ], 30)),
 ]
+
 
 ## Variables
 
