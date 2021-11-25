@@ -96,7 +96,7 @@ for i, group in enumerate(groups):
 
 layout_conf = {
     'border_focus': '#39FF14',
-    'border_width': 1,
+    'border_width': 3,
     'margin': 7
 }
 
@@ -119,7 +119,7 @@ layouts = [
 screens = [
   Screen(
     top=bar.Bar([
-      widget.GroupBox(fontsize=18),
+      widget.GroupBox(fontsize=18,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
       widget.WindowName(),
       widget.CurrentLayoutIcon(scale=0.5),
       widget.CurrentLayout(),
