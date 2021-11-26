@@ -34,10 +34,6 @@ keys = [
   Key([mod, "control"], "r", lazy.restart()),
   # Cerrar Qtile
   Key([mod, "control"], "q", lazy.shutdown()),
-  # Bloquear pantalla
-  Key([mod, "control"], "l", lazy.spawm("light-locker-command -l")),
-  # Linea de comandos en el panel
-  Key([mod], "r", lazy.spawncmd()),
   # Menu
   Key([mod], "d", lazy.spawn("rofi -show drun")),
   # Listar ventanas
