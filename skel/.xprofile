@@ -1,4 +1,5 @@
 feh -z --bg-fill ~/Imágenes/backgrounds
 picom &
+numlockx
 nm-applet &
 volumeicon &
