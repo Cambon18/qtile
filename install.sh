@@ -5,3 +5,4 @@ sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 trizen --noconfirm -Rns papirus-folders
 sudo cp -r skel /etc
+sudo cp -r lightdm /etc
