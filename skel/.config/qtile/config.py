@@ -30,10 +30,14 @@ keys = [
   # Cambiar de pantalla
   Key([mod], "period", lazy.next_screen()),
   Key([mod], "comma", lazy.prev_screen()),
+  # Bloquear pantalla
+  Key([mod, "control"], "l", lazy.spawn("dm-tool lock")),
   # Reiniciar Qtile
   Key([mod, "control"], "r", lazy.restart()),
   # Cerrar Qtile
   Key([mod, "control"], "q", lazy.shutdown()),
+  # Apagar ordenador
+  Key([mod, "control"], "s", lazy.spawn("shutdown -h now")),
   # Menu
   Key([mod], "d", lazy.spawn("rofi -show drun")),
   # Listar ventanas
