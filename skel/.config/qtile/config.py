@@ -126,7 +126,8 @@ screens = [
     top=bar.Bar([
       widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
       widget.WindowName(**config),
-      widget.CheckUpdates(**config,display_format=" {updates}",custom_command="checkupdates; trizen -Qua"),
+      widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
+      widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="trizen -Qua"),
       widget.CurrentLayoutIcon(scale=0.6),
       widget.CurrentLayout(**config),
       widget.Systray(icon_size=25),
