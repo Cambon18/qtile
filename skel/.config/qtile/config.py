@@ -133,7 +133,7 @@ screens = [
 #      widget.CurrentLayoutIcon(scale=0.6),
 #      widget.CurrentLayout(**config),
       widget.Systray(icon_size=25),
-      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',update_interval=1),
+      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
       widget.Clock(**config)
       ], 30)),
 ]
