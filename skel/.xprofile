@@ -1,4 +1,4 @@
-feh -rz --bg-fill ~/Imágenes/backgrounds
+(while true; do feh -rz --bg-fill ~/Imágenes/backgrounds && sleep 15m; done) &
 picom &
 numlockx
 nm-applet &
