@@ -105,7 +105,7 @@ layouts = [
     layout.Max(),
 #    layout.MonadWide(),
     layout.Matrix(**layout_conf),
-    layout.Bsp(**layout_conf),
+#    layout.Bsp(),
 #    layout.RatioTile(),
 #    layout.Columns(),
 #    layout.Tile(),
