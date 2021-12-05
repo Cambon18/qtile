@@ -128,8 +128,10 @@ screens = [
       widget.WindowName(**config),
       widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
       widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="trizen -Qua"),
-      widget.CurrentLayoutIcon(scale=0.6),
-      widget.CurrentLayout(**config),
+      widget.CPU(**config,format="  {load_percent}%"),
+      widget.Memory(**config,format="|{MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
+#      widget.CurrentLayoutIcon(scale=0.6),
+#      widget.CurrentLayout(**config),
       widget.Systray(icon_size=25),
       widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',update_interval=1),
       widget.Clock(**config)
