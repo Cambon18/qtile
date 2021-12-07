@@ -3,5 +3,6 @@ configuration {
  font: "Cantarell 12";
  icon-theme: "ePapirus-Dark";
  show-icons: true;
+ drun-display-format: " {name} [<span weight='light' size='small'><i>({generic})</i></span>]";
  }
 @theme "/usr/share/rofi/themes/android_notification.rasi"
