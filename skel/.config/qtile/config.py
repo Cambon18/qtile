@@ -26,7 +26,6 @@ keys = [
   Key([mod, "shift"], "Tab", lazy.prev_layout()),
   # Cerrar ventana
   Key([mod], "w", lazy.window.kill()),
-  Key([mod, "shift"], "q", lazy.window.kill()),
   # Cambiar de pantalla
   Key([mod], "period", lazy.next_screen()),
   Key([mod], "comma", lazy.prev_screen()),
@@ -46,10 +45,6 @@ keys = [
   Key([mod], "s", lazy.spawn("rofi -show ssh")),
   # Browser
   Key([mod], "b", lazy.spawn("brave")),
-  # Browser incognito con tor
-  Key([mod], "t", lazy.spawn("brave --tor")),
-  # Lanzador de juegos (Lutris)
-  Key([mod], "g", lazy.spawn("lutris")),
   # File Explorer
   Key([mod], "f", lazy.spawn("thunar")),
   # Terminal
