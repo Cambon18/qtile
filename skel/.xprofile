@@ -4,3 +4,4 @@ numlockx
 nm-applet &
 volumeicon &
 blueman-applet &
+xscreensaver --no-splash &
