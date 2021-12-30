@@ -3,7 +3,7 @@
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
-cycle:		0:00:00
+cycle:		0:00:27
 lock:		True
 lockTimeout:	0:10:00
 passwdTimeout:	0:00:30
@@ -12,7 +12,7 @@ installColormap:    True
 verbose:	False
 splash:		True
 splashDuration:	0:00:05
-demoCommand:	feh -r -z -F -D 5 $HOME/Imágenes/backgrounds
+demoCommand:	feh -r -z -F -Y $HOME/Imágenes/backgrounds
 nice:		10
 fade:		True
 unfade:		True
@@ -195,7 +195,7 @@ programs:								      \
 				popsquares -root			    \n\
   GL: 				surfaces -root				    \n\
 				xanalogtv -root				    \n\
-				feh -r -z -F -D 5			      \
+				feh -r -z -F -Y			      	      \
 				  $HOME/Imágenes/backgrounds		    \n\
 				anemotaxis -root			    \n\
 - GL: 				antinspect -root			    \n\
