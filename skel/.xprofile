@@ -2,6 +2,6 @@
 picom &
 numlockx
 nm-applet &
-volumeicon &
+volctl &
 blueman-applet &
 xscreensaver --no-splash &
