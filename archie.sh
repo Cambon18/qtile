@@ -4,5 +4,5 @@ sudo systemctl enable bluetooth.service
 sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 trizen --noconfirm -Rns papirus-folders
-sudo cp -r skel /etc
-sudo cp -r lightdm /etc
+sudo cp -rv skel /etc
+sudo cp -rv lightdm /etc
