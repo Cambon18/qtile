@@ -1,7 +1,7 @@
-(while true; do feh -rz --bg-fill --no-fehbg ~/Imágenes/backgrounds && sleep 15m; done) &
+#(while true; do feh -rz --bg-fill --no-fehbg ~/Imágenes/backgrounds && sleep 15m; done) &
+feh --bg-fill /etc/lightdm/background.png
 picom &
 numlockx
 nm-applet &
 volctl &
 blueman-applet &
-xscreensaver --no-splash &
