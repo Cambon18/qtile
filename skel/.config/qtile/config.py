@@ -126,7 +126,7 @@ screens = [
       widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
       widget.WindowName(**config),
       widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
-      widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="trizen -Qua"),
+      widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
       widget.CPU(**config,format="   {load_percent}%"),
       widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
 #      widget.CurrentLayoutIcon(scale=0.6),
