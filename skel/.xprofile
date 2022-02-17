@@ -1,10 +1,11 @@
 ## Fondo aleatorio cada 15 minutos con las imagenes de la carpeta Imagenes del usuario
 #(while true; do feh -rz --bg-fill --no-fehbg ~/Imágenes && sleep 15m; done) &
 ## Fondo estatico (por defecto el mismo que el gestor de inicio de sesion)
-feh --bg-fill /etc/lightdm/background.png
+feh --bg-fill /etc/lightdm/background.png &
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 picom &
-numlockx
+numlockx &
 nm-applet &
 volctl &
 blueman-applet &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
