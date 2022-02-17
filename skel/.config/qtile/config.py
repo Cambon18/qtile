@@ -46,7 +46,7 @@ keys = [
   # Browser
   Key([mod], "b", lazy.spawn("brave")),
   # File Explorer
-  Key([mod], "f", lazy.spawn("thunar")),
+  Key([mod], "f", lazy.spawn("nautilus")),
   # Terminal
   Key([mod], "Return", lazy.spawn("alacritty")),
   # Volume
