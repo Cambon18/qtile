@@ -5,7 +5,8 @@ feh --bg-fill /etc/lightdm/background.png &
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 picom &
 numlockx &
+udiskie -at &
+blueman-applet &
 nm-applet &
 volctl &
-blueman-applet &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
