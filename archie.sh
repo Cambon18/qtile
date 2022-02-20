@@ -3,6 +3,9 @@ yay --noconfirm -Sy xorg-server xorg-xinit lightdm lightdm-gtk-greeter qtile pyt
 yay --noconfirm -Sy brave-bin alacritty gnome-disk-utility nautilus nautilus-open-any-terminal vlc spotify ristretto
 sudo systemctl enable bluetooth.service
 sudo systemctl enable lightdm.service
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 sudo papirus-folders -C green
 yay --noconfirm -Rns papirus-folders
 sudo cp -rv skel /etc
