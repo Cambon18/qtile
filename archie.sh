@@ -5,8 +5,5 @@ sudo systemctl enable bluetooth.service
 sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 yay --noconfirm -Rns papirus-folders
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 sudo cp -rv skel /etc
 sudo cp -rv lightdm /etc
