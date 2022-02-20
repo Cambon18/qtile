@@ -1,0 +1,4 @@
+[com/github/stunkymonkey/nautilus-open-any-terminal]
+keybindings='<Ctrl><Alt>t'
+new-tab=true
+terminal='alacritty'
