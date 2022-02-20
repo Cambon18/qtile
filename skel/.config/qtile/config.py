@@ -132,6 +132,7 @@ screens = [
       widget.WindowName(**config),
       widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
       widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
+      widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
       widget.CPU(**config,format="   {load_percent}%"),
       widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
 #      widget.CurrentLayoutIcon(scale=0.6),
