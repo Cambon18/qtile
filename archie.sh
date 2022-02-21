@@ -7,7 +7,7 @@ gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacri
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
 sudo mkdir -p /etc/skel/.config/dconf
-sudo cp .config/dconf/user
+sudo cp .config/dconf/user /etc/skel/.config/dconf
 sudo papirus-folders -C green
 yay --noconfirm -Rns papirus-folders
 sudo cp -rv skel /etc
