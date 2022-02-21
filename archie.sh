@@ -12,3 +12,4 @@ sudo papirus-folders -C green
 yay --noconfirm -Rns papirus-folders
 sudo cp -rv skel /etc
 sudo cp -rv lightdm /etc
+abc123
