@@ -13,7 +13,6 @@ pulseaudio
 pulseaudio-bluetooth
 pavucontrol
 volctl
-cbatticon
 notify-osd
 feh
 arandr
@@ -35,5 +34,5 @@ nautilus
 nautilus-open-any-terminal
 vlc
 spotify
-ristretto
+eog
 papirus-folders
