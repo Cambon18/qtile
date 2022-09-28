@@ -1,7 +1,11 @@
 ## Fonfo aleatorio cada inicio con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
 nitrogen --set-zoom-fill --random Imágenes/Backgrounds
+## Fonfo aleatorio cada 10 min con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
+#(while true; do nitrogen --set-zoom-fill --random Imágenes/Backgrounds && sleep 10m; done) &
 ## Fondo aleatorio cada inicio con las imagenes de la carpeta Imágenes/Backgrounds del usuario(Establece un fondo para cada pantalla)
 #feh -rz --bg-fill --no-fehbg ~/Imágenes/Backgrounds &
+## Fondo aleatorio cada 10 min con las imagenes de la carpeta Imágenes/Backgrounds del usuario(Establece un fondo para cada pantalla)
+#(while true; do feh -rz --bg-fill --no-fehbg ~/Imágenes/Backgrounds && sleep 10m; done) &
 ## Fondo estatico (por defecto el mismo que el gestor de inicio de sesion)
 #feh --bg-fill /etc/lightdm/background.png &
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
