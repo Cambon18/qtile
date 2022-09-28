@@ -151,8 +151,9 @@ salida = subprocess.check_output("xrandr -d :0 | grep \ connected | wc -l", shel
 
 n = int(salida.decode('UTF-8'))
 
-for i in range(1, n):
-    screens.append(Screen(top=bar.Bar(widgets_secundaria, 30)))
+if n > 1:
+    for i in range(1, n):
+        screens.append(Screen(top=bar.Bar(widgets_secundaria, 30)))
 
 
 ## Variables
