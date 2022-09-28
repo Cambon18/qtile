@@ -1,4 +1,5 @@
 
+import subprocess
 from libqtile import hook, layout, bar, widget
 from libqtile.config import Key, Group, Drag, Click, Screen
 from libqtile.command import lazy
@@ -118,16 +119,14 @@ layouts = [
 #    layout.Zoomy(),
 ]
 
-## Definimos Barra
+## Definimos Pantallas
 
 config = {
     'font': 'Cantarell',
     'fontsize': 17
 }
 
-screens = [
-  Screen(
-    top=bar.Bar([
+widgets_principal = [
       widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
       widget.WindowName(**config),
       widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
@@ -138,8 +137,28 @@ screens = [
       widget.Systray(icon_size=25),
       widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
       widget.Clock(**config)
-      ], 30)),
 ]
+
+widgets_secundaria = [
+      widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+      widget.WindowName(**config),
+      widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
+      widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
+      widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
+      widget.CPU(**config,format="   {load_percent}%"),
+      widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
+      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
+      widget.Clock(**config)
+]
+
+screens = [Screen(top=bar.Bar(widgets_principal, 30))]
+
+salida = subprocess.check_output("xrandr -d :0 | grep \ connected | wc -l", shell=True)
+
+n = int(salida.decode('UTF-8'))
+
+for i in range(1, n):
+    screens.append(Screen(top=bar.Bar(widgets_secundaria, 30)))
 
 
 ## Variables
