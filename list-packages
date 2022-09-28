@@ -43,3 +43,5 @@ steam
 system-config-printer
 cups
 nitrogen
+nmap
+rpi-imager
