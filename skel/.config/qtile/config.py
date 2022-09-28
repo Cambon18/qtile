@@ -145,8 +145,6 @@ widgets_secundaria = [
       widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
       widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
       widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
-      widget.CPU(**config,format="   {load_percent}%"),
-      widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
       widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
       widget.Clock(**config)
 ]
