@@ -1,1 +1,2 @@
-# Qtile de CambonOS
+# Qtile
+Escritorio Qtile para CambonOS
