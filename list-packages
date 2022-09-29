@@ -10,6 +10,7 @@ rofi
 brightnessctl
 playerctl
 pulseaudio
+pulseaudio-jack
 pulseaudio-bluetooth
 pavucontrol
 volctl
