@@ -50,6 +50,8 @@ keys = [
   Key([mod], "f", lazy.spawn("nautilus")),
   # Terminal
   Key([mod], "Return", lazy.spawn("alacritty")),
+  # Comfigurar monitores
+  Key([mod], "f", lazy.spawn("cambonos-xrandr")),
   # Volume
   Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
   Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
