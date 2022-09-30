@@ -1,3 +1,6 @@
+## Configuramos los monitores
+cambonos-xrandr
+
 ## Fonfo aleatorio cada inicio con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
 #nitrogen --set-zoom-fill --random Imágenes/Backgrounds
 ## Fonfo aleatorio cada 10 min con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
@@ -8,6 +11,7 @@
 (while true; do feh -rz --bg-fill --no-fehbg ~/Imágenes/Backgrounds && sleep 10m; done) &
 ## Fondo estatico (por defecto el mismo que el gestor de inicio de sesion)
 #feh --bg-fill /etc/lightdm/background.png &
+
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 picom &
@@ -20,5 +24,5 @@ volctl &
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-head -n 18 .xprofile > tmp
+head -n 22 .xprofile > tmp
 mv tmp .xprofile
