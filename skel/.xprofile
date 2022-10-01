@@ -12,7 +12,6 @@
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 picom &
-numlockx &
 udiskie -at &
 blueman-applet &
 nm-applet &
@@ -21,5 +20,5 @@ volctl &
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
 gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-head -n 19 .xprofile > tmp
+head -n 18 .xprofile > tmp
 mv tmp .xprofile
