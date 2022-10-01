@@ -1,6 +1,3 @@
-## Configuramos los monitores
-cambonos-xrandr
-
 ## Fonfo aleatorio cada inicio con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
 #nitrogen --set-zoom-fill --random Imágenes/Backgrounds
 ## Fonfo aleatorio cada 10 min con las imagenes de la carpeta Imágenes/Backgrounds del usuario(La imagen se extiende por varios monitores)
