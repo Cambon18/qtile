@@ -7,7 +7,7 @@ sudo cp -rv lightdm /etc
 echo "greeter-session=lightdm-slick-greeter" >> /etc/lightdm/lightdm.conf
 echo "greeter-show-manual-login=true" >> /etc/lightdm/lightdm.conf
 echo "display-setup-script=cambonos-xrandr" >> /etc/lightdm/lightdm.conf
-echo -e "[Desktop Entry]\nName=Qtile\nComment=Qtile Session\nExec=qtile start\nType=Application\nKeywords=wm;tiling" > /usr/share/xsessions/Proba.desktop
+echo -e "[Desktop Entry]\nName=Proba\nComment=Qtile Session\nExec=qtile start\nType=Application\nKeywords=wm;tiling" > /usr/share/xsessions/Proba.desktop
 
 sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
