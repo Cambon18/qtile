@@ -7,4 +7,5 @@ sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 yay --noconfirm -Rns papirus-folders
 sudo cp -rv skel /etc
+sudo cp -rv slick-greeter /usr/share
 sudo touch /etc/skel/.config/picom.conf
