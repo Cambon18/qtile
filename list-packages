@@ -16,7 +16,6 @@ pavucontrol
 volctl
 notify-osd
 feh
-arandr
 gnome-keyring
 udiskie
 polkit-gnome
@@ -35,16 +34,10 @@ nautilus
 gvfs-smb
 nautilus-open-any-terminal
 vlc
-spotify
 eog
 papirus-folders
-gamemode
-mangohud
-steam
 system-config-printer
 cups
 nitrogen
 nmap
-rpi-imager
 wget
-obsidian
