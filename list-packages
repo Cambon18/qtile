@@ -19,7 +19,6 @@ feh
 gnome-keyring
 udiskie
 polkit-gnome
-networkmanager
 network-manager-applet
 blueman
 numlockx
