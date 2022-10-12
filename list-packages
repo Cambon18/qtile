@@ -20,7 +20,6 @@ gnome-keyring
 udiskie
 polkit-gnome
 networkmanager
-networkmanager-openvpn
 network-manager-applet
 blueman
 numlockx
@@ -41,3 +40,4 @@ cups
 nitrogen
 nmap
 wget
+htop
