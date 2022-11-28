@@ -8,10 +8,3 @@ udiskie -at &
 blueman-applet &
 nm-applet &
 volctl &
-
-## Comandos a ejecutar en el primer inicio de sesion
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal alacritty
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal keybindings '<Ctrl><Alt>t'
-gsettings set com.github.stunkymonkey.nautilus-open-any-terminal new-tab true
-head -n 10 .xprofile > tmp
-mv tmp .xprofile
