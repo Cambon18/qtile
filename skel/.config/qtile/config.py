@@ -47,7 +47,7 @@ keys = [
   # Browser
   Key([mod], "b", lazy.spawn("brave")),
   # File Explorer
-  Key([mod], "f", lazy.spawn("nemo")),
+  Key([mod], "f", lazy.spawn("thunar")),
   # Terminal
   Key([mod], "Return", lazy.spawn("alacritty")),
   # Comfigurar monitores

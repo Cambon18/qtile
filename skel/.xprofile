@@ -8,3 +8,4 @@ udiskie -at &
 blueman-applet &
 nm-applet &
 volctl &
+thunar --daemon &

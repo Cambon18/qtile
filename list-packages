@@ -28,8 +28,13 @@ papirus-icon-theme
 brave-bin
 alacritty
 gnome-disk-utility
-nemo
+thunar
+xapp
+gvfs
 gvfs-smb
+tumbler
+thunar-archive-roller
+file-roller
 vlc
 eog
 papirus-folders
