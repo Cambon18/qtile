@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="thunar" version="1.0">
+  <property name="last-view" type="string" value="ThunarIconView"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_150_PERCENT"/>
+  <property name="last-window-width" type="int" value="940"/>
+  <property name="last-window-height" type="int" value="1030"/>
+  <property name="last-window-maximized" type="bool" value="false"/>
+  <property name="misc-single-click" type="bool" value="false"/>
+  <property name="misc-thumbnail-mode" type="string" value="THUNAR_THUMBNAIL_MODE_ALWAYS"/>
+  <property name="misc-image-preview-mode" type="string" value="THUNAR_IMAGE_PREVIEW_MODE_EMBEDDED"/>
+  <property name="last-location-bar" type="string" value="ThunarLocationButtons"/>
+  <property name="last-image-preview-visible" type="bool" value="true"/>
+  <property name="last-statusbar-visible" type="bool" value="true"/>
+  <property name="last-menubar-visible" type="bool" value="true"/>
+  <property name="hidden-bookmarks" type="array">
+    <value type="string" value="computer:///"/>
+  </property>
+</channel>
