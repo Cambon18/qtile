@@ -9,6 +9,8 @@ from libqtile.command import lazy
 mod = "mod4"
 
 keys = [
+  # Ocultar barra
+  Key([mod], "f11", lazy.hide_show_bar()),
   # Cambiar entre ventanas
   Key([mod], "j", lazy.layout.down()),
   Key([mod], "k", lazy.layout.up()),
