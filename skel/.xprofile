@@ -9,3 +9,4 @@ blueman-applet &
 nm-applet &
 volctl &
 thunar --daemon
+unclutter -idle 5 --start-hidden &
