@@ -25,6 +25,7 @@ numlockx
 pacman-contrib
 matcha-gtk-theme 
 papirus-icon-theme
+papirus-folders
 brave-bin
 alacritty
 gnome-disk-utility
@@ -36,8 +37,5 @@ tumbler
 thunar-archive-roller
 file-roller
 vlc
-eog
-papirus-folders
 system-config-printer
 cups
-nmap
