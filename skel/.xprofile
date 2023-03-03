@@ -1,5 +1,5 @@
-## Fondo aleatorio cada inicio con las imagenes de la carpeta Imágenes del usuario(Establece un fondo para cada pantalla)
-feh -rz --bg-fill --no-fehbg ~/Imágenes &
+## Establece el fondo de pantalla
+feh --bg-fill --no-fehbg /usr/share/slick-greeter/background.jpg
 
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
