@@ -3,9 +3,9 @@ feh -rz --bg-fill --no-fehbg ~/Imágenes &
 
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-picom &
+picom -b --config ~/.config/picom.conf
 udiskie -at &
 blueman-applet &
 nm-applet &
 volctl &
-thunar --daemon &
+thunar --daemon
