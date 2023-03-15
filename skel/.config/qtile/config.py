@@ -89,7 +89,7 @@ mouse = [
 ## Grupos
 
 groups = [Group(i) for i in [
-    "1: ","2: ", "3: ", "4: ",  "5: ",  "6: ",  "7: ", "ss"
+    "1: ","2: ", "3: ", "4: ",  "5: ",  "6: ",  "7: "
 ]]
 
 for i, group in enumerate(groups):
@@ -115,7 +115,7 @@ layouts = [
 #    layout.MonadWide(),
 #    layout.Matrix(),
 #    layout.Bsp(),
-    layout.RatioTile(**layout_conf),
+#    layout.RatioTile(**layout_conf),
 #    layout.Columns(),
 #    layout.Tile(),
 #    layout.TreeTab(),
