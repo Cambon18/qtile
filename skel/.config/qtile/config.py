@@ -1,4 +1,5 @@
 
+import psutil
 import subprocess
 from libqtile import hook, layout, bar, widget
 from libqtile.config import Key, Group, Drag, Click, Screen
@@ -130,26 +131,44 @@ config = {
     'fontsize': 17
 }
 
-widgets_principal = [
-      widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
-      widget.WindowName(**config),
-      widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
-      widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
-      widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
-      widget.CPU(**config,format="   {load_percent}%"),
-      widget.ThermalSensor(**config),
-      widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
-      widget.Systray(icon_size=25),
-      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
-      widget.Clock(**config)
-]
-
-widgets_secundaria = [
-      widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
-      widget.WindowName(**config),
-      widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
-      widget.Clock(**config)
-]
+battery = psutil.sensors_battery()
+if battery:
+      widgets_principal = [
+            widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+            widget.WindowName(**config),
+            widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
+            widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
+            widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
+            widget.CPU(**config,format="   {load_percent}%"),
+            widget.ThermalSensor(**config),
+            widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
+            widget.Systray(icon_size=25),
+            widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
+      ]
+      widgets_secundaria = [
+            widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+            widget.WindowName(**config),
+            widget.Battery(**config,discharge_char=' ',charge_char=' ',full_char=' ',empty_char=' ',format='{char}  {percent:2.0%}',show_short_text='',update_interval=1),
+            widget.Clock(**config)
+      ]
+else:
+      widgets_principal = [
+            widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+            widget.WindowName(**config),
+            widget.CheckUpdates(**config,display_format=" Pacman: {updates} ",custom_command="checkupdates"),
+            widget.CheckUpdates(**config,display_format=" AUR: {updates} ",custom_command="yay -Qua"),
+            widget.CheckUpdates(**config,display_format=" Service: {updates} ",custom_command="systemctl list-units --failed | grep failed"),
+            widget.CPU(**config,format="   {load_percent}%"),
+            widget.ThermalSensor(**config),
+            widget.Memory(**config,format=" {MemUsed: .1f}{mm}/{MemTotal: .0f}{mm} ",measure_mem="G"),
+            widget.Systray(icon_size=25),
+            widget.Clock(**config)
+      ]
+      widgets_secundaria = [
+            widget.GroupBox(**config,hide_unused="True",highlight_method="line",urgent_alert_method="line",this_current_screen_border="#39FF14",this_screen_border="#39FF14"),
+            widget.WindowName(**config),
+            widget.Clock(**config)
+      ]
 
 screens = [Screen(top=bar.Bar(widgets_principal, 30))]
 
