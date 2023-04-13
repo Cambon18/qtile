@@ -1,0 +1,44 @@
+#!/bin/bash
+
+##Definimos variables
+pantallason=$(xrandr -d :0 | grep \ connected | wc -l)
+pantallasoff=$(xrandr -d :0 | grep \ disconnected | wc -l)
+rpantallas=$(xrandr -d :0 | grep -A 1 \ connected | awk '{print $1}')
+
+#Configuracion pantalla unica
+if [ $pantallason -eq 1 ]
+then
+	exit
+fi
+
+#Configuracion dos pantallas, se configura la pantalla 2 como principal a la derecha de la pantalla 1
+if [ $pantallason -eq 2 ]
+then
+	L1=$(echo $rpantallas | cut -d " " -f 1) #Nombre pantalla 1
+	L2=$(echo $rpantallas | cut -d " " -f 2) #Resolucion pantalla 1
+	L4=$(echo $rpantallas | cut -d " " -f 4) #Nombre pantalla 2
+	L5=$(echo $rpantallas | cut -d " " -f 5) #Resolucion pantalla 2
+	if [[ $L2 = $L5 ]]
+	then
+		xrandr --output $L1 --mode $L2 --pos 0x0 --rotate normal --output $L4 --primary --mode $L5 --pos 0x0 --rotate normal
+	fi
+	L6=$(echo $L2 | cut -d "x" -f 1)
+	L7=$(echo $L5 | cut -d "x" -f 1)
+	if [[ $L6 -gt $L7 ]]
+	then
+		xrandr --output $L1 --mode $L5 --pos 0x0 --rotate normal --output $L4 --primary --mode $L5 --pos 0x0 --rotate normal
+	fi
+	if [[ $L6 -lt $L7 ]]
+	then
+		xrandr --output $L1 --mode $L2 --pos 0x0 --rotate normal --output $L4 --primary --mode $L2 --pos 0x0 --rotate normal
+	fi
+fi
+
+#Configuramos pantallas desconectadas
+nombrepantallas=$(xrandr -d :0 | grep -A 1 \ disconnected | awk '{print $1}')
+i=1
+while [ $i -le $pantallasoff ]
+do
+	xrandr --output $(echo $nombrepantallas | cut -d " " -f $i) --off
+	((i++))
+done
