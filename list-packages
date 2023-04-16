@@ -16,8 +16,6 @@ pavucontrol
 volctl
 notify-osd
 feh
-gnome-keyring
-libsecret
 polkit-gnome
 udiskie
 network-manager-applet

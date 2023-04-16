@@ -5,7 +5,7 @@ feh --bg-fill --no-fehbg /usr/share/slick-greeter/background.jpg
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 picom -b &
-udiskie -at &
+udiskie -as &
 blueman-applet &
 nm-applet &
 volctl &
