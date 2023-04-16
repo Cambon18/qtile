@@ -17,8 +17,9 @@ volctl
 notify-osd
 feh
 gnome-keyring
-udiskie
+libsecret
 polkit-gnome
+udiskie
 network-manager-applet
 blueman
 numlockx
@@ -36,11 +37,10 @@ gvfs-smb
 tumbler
 thunar-archive-roller
 file-roller
-vlc
 system-config-printer
 cups
 unclutter
 arandr
-pigz
 flameshot
 nvtop
+vlc

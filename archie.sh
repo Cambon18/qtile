@@ -13,3 +13,4 @@ sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 sudo cp -rv skel /etc
 sudo cp -rv slick-greeter /usr/share
+sudo cp -rv pam/* /etc/pam.d
