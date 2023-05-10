@@ -1,5 +1,5 @@
 configuration {
- modi: "window,dmenu,drun,ssh,run";
+ modi: "window,drun,ssh,run";
  font: "Cantarell 12";
  icon-theme: "ePapirus-Dark";
  show-icons: true;
