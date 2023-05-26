@@ -1,5 +1,4 @@
 ## Establece el fondo de pantalla
-~/.screenlayout/Automatico
 feh --bg-fill --no-fehbg /usr/share/slick-greeter/background.jpg
 
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
@@ -11,4 +10,3 @@ nm-applet &
 volctl &
 thunar --daemon &
 unclutter -idle 5 --start-hidden &
-export PATH=$PATH:~/.local/bin

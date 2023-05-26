@@ -1,6 +1,0 @@
-#!/bin/bash
-cd ~/.screenlayout
-sh "$(ls | rofi -dmenu)"
-echo "restart()" | qtile shell &
-options=$(grep -e "^feh" ~/.xprofile | cut -d " " -f 2-)
-feh $options
