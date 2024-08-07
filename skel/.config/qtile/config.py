@@ -3,7 +3,7 @@ import psutil
 import subprocess
 from libqtile import hook, layout, bar, widget
 from libqtile.config import Key, Group, Drag, Click, Screen
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 ## Atajos de teclado
 
