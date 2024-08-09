@@ -1,5 +1,4 @@
-xorg-server
-xorg-xinit
+xorg
 lightdm
 lightdm-slick-greeter
 qtile
@@ -42,3 +41,4 @@ arandr
 flameshot
 nvtop
 vlc
+ristretto
