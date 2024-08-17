@@ -1,5 +1,5 @@
 ## Establece el fondo de pantalla
-feh --bg-fill --no-fehbg /usr/share/slick-greeter/background.jpg
+feh --bg-fill --no-fehbg /usr/share/backgrounds/wallpaper.jpeg
 
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &

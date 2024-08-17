@@ -12,4 +12,9 @@ sudo cp -rv lightdm /etc
 sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
 sudo cp -rv skel /etc
-sudo cp -rv slick-greeter /usr/share
+sudo mkdir -p /usr/share/backgrounds
+sudo cp imagenes/wallpaper.jpeg /usr/share/backgrounds/
+sudo cp imagenes/cambonos.png /usr/share/pixmaps/
+sudo cp iamgenes/background.jpg /usr/share/slick-greeter/
+sudo cp iamgenes/qtile.png /usr/share/slick-greeter/badges/
+sudo cp iamgenes/qtile-wayland.png /usr/share/slick-greeter/badges/
