@@ -105,19 +105,19 @@ for i, group in enumerate(groups):
 layout_conf = {
     'border_focus': '#39FF14',
     'border_width': 3,
-    'margin': 7
+    'margin': 3
 }
 
 layouts = [
     layout.MonadTall(**layout_conf),
     layout.Max(),
+#    layout.TreeTab(),
 #    layout.MonadWide(),
 #    layout.Matrix(),
 #    layout.Bsp(),
-#    layout.RatioTile(**layout_conf),
+#    layout.RatioTile(),
 #    layout.Columns(),
 #    layout.Tile(),
-#    layout.TreeTab(),
 #    layout.VerticalTile(),
 #    layout.Zoomy(),
 ]

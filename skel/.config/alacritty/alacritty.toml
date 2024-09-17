@@ -21,3 +21,6 @@ yellow = "0xfab795"
 [colors.primary]
 background = "0x1c1e26"
 foreground = "0xe0e0e0"
+
+[font]
+size=13

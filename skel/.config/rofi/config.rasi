@@ -1,6 +1,6 @@
 configuration {
- modi: "window,drun,ssh,run";
- font: "Cantarell 12";
+ modi: "window,drun,ssh";
+ font: "Cantarell 13";
  icon-theme: "ePapirus-Dark";
  show-icons: true;
  drun-display-format: " {name} [<span weight='light' size='small'><i>({generic})</i></span>]";
