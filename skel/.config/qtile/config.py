@@ -122,6 +122,8 @@ layouts = [
 #    layout.Zoomy(),
 ]
 
+floating_layout = layout.Floating(border_width=0)
+
 ## Definimos Pantallas
 
 config = {
@@ -184,7 +186,7 @@ if n > 1:
 
 main = None
 dgroups_key_binder = None
-follow_mouse_focus = True
+follow_mouse_focus = False
 bring_front_click = False
 cursor_warp = True
 auto_fullscreen = True
