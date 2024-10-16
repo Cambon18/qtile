@@ -2,11 +2,11 @@
 feh --bg-fill --no-fehbg /usr/share/backgrounds/wallpaper.jpeg
 
 ## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-picom -b &
-udiskie -as --password-cache 60 &
-blueman-applet &
-nm-applet &
-volctl &
-thunar --daemon &
-unclutter -idle 5 --start-hidden &
+(sleep 1.1; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1) &
+(sleep 1.2; picom -b) &
+(sleep 1.3; udiskie -as --password-cache 60) &
+(sleep 1.4; blueman-applet) &
+(sleep 1.5; nm-applet) &
+(sleep 1.6; volctl) &
+(sleep 1.7; thunar --daemon) &
+(sleep 1.8; unclutter -idle 5 --start-hidden) &
