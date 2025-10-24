@@ -8,6 +8,7 @@ do
 done
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
+sudo sed -i 's/\bresolve\b/mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
 sudo cp -rv lightdm /etc
 sudo systemctl enable lightdm.service
 sudo papirus-folders -C green
