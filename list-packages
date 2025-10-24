@@ -36,6 +36,7 @@ gvfs-smb
 tumbler
 system-config-printer
 cups
+colord
 unclutter
 arandr
 nvtop
