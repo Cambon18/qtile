@@ -6,6 +6,7 @@ do
 	yay --noconfirm -Sy $(head -n $i list-packages | tail -n 1)
 	i=$(( $i + 1 ))
 done
+sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
 sudo sed -i 's/\bresolve\b/mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
