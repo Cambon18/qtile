@@ -33,6 +33,12 @@ file-roller
 xapp
 gvfs
 gvfs-smb
+gvfs-afc
+gvfs-mtp
+gvfs-nfs
+gvfs-dnssd
+gvfs-google
+gvfs-onedrive
 tumbler
 system-config-printer
 cups
