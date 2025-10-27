@@ -19,9 +19,3 @@ unclutter -idle 5 --start-hidden &
 (sleep 1.6; volctl) & # audio
 (sleep 1.7; udiskie -as --password-cache 60) &  # automontaje
 (sleep 1.8; nm-applet) &                       # red
-
-## Fondo de pantalla rotativo opcional
-pgrep -f "feh --bg-fill -z" || (while true; do feh --bg-fill -z ~/Imágenes/Wallpapers/*; sleep 30; done) &
-
-## Ajustar PATH)
-export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
