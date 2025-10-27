@@ -1,14 +1,27 @@
-## Establece el fondo de pantalla
+#!/bin/bash
+# ~/.xprofile — ejecutado al iniciar sesión gráfica
+
+## Fondo de pantalla inicial
 feh --bg-fill --no-fehbg /usr/share/backgrounds/wallpaper.jpeg
 
-## Funciones necesarias para el funcionamiento del gestor de ventanas y la barra
-(sleep 1.1; xdg-user-dirs-update) &
-(sleep 1.2; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1) &
-(sleep 1.3; gnome-keyring --start --components=secrets,ssh,gpg) &
-(sleep 1.4; picom -b) &
-(sleep 1.5; thunar --daemon) &
-(sleep 1.6; unclutter -idle 5 --start-hidden) &
-(sleep 1.7; blueman-applet) &
-(sleep 1.8; volctl) &
-(sleep 1.9; udiskie -as --password-cache 60) &
-(sleep 2; nm-applet) &
+## Lanzar polkit-gnome: necesario antes de Thunar y udiskie
+(sleep 0.5; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1) &
+
+## Lanzar demonios de escritorio básicos
+pgrep -x picom || picom -b &
+unclutter -idle 5 --start-hidden &
+
+## Iniciar Thunar en modo daemon
+(sleep 1; thunar --daemon) &
+
+## Iniciar demonios auxiliares
+(sleep 1.5; blueman-applet) & # bluetooth
+(sleep 1.6; volctl) & # audio
+(sleep 1.7; udiskie -as --password-cache 60) &  # automontaje
+(sleep 1.8; nm-applet) &                       # red
+
+## Fondo de pantalla rotativo opcional
+pgrep -f "feh --bg-fill -z" || (while true; do feh --bg-fill -z ~/Imágenes/Wallpapers/*; sleep 30; done) &
+
+## Ajustar PATH)
+export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
