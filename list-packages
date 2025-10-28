@@ -8,9 +8,11 @@ picom
 rofi
 brightnessctl
 playerctl
-pulseaudio
-pulseaudio-jack
-pulseaudio-bluetooth
+pipewire
+pipewire-pulse
+pipewire-alsa
+pipewire-jack
+wireplumber
 pavucontrol
 volctl
 notify-osd
