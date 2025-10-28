@@ -10,7 +10,6 @@ sudo sed -i 's/\"qtile/\"\/usr\/bin\/qtile/g' /usr/lib/udev/rules.d/99-qtile.rul
 sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
 sudo systemctl enable rtkit-daemon.service
 sudo systemctl enable upower.service
-sudo systemctl enable pipewire pipewire-pulse wireplumber
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
 sudo sed -i 's/\bresolve\b/mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
