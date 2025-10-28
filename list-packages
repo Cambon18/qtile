@@ -18,6 +18,8 @@ feh
 polkit-gnome
 udiskie
 network-manager-applet
+bluez
+bluez-utils
 blueman
 numlockx
 pacman-contrib
