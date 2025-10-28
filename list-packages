@@ -51,3 +51,6 @@ vlc
 ristretto
 sof-firmware
 nss-mdns
+rtkit
+upower
+xdg-desktop-portal
