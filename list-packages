@@ -12,6 +12,7 @@ pipewire
 pipewire-pulse
 pipewire-alsa
 pipewire-jack
+pipewire-libcamera
 wireplumber
 pavucontrol
 volctl
