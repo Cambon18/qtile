@@ -6,6 +6,7 @@ do
 	yay --noconfirm -Sy $(head -n $i list-packages | tail -n 1)
 	i=$(( $i + 1 ))
 done
+sudo sed -i 's/\"qtile/\"\/usr\/bin\/qtile/g' /usr/lib/udev/rules.d/99-qtile.rules
 sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
 sudo systemctl enable rtkit-daemon.service
 sudo systemctl enable upower.service
