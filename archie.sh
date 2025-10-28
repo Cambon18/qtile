@@ -7,6 +7,8 @@ do
 	i=$(( $i + 1 ))
 done
 sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
+sudo systemctl enable rtkit-daemon.service
+sudo systemctl enable upower.service
 sudo systemctl enable pipewire pipewire-pulse wireplumber
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
