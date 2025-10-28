@@ -7,6 +7,7 @@ do
 	i=$(( $i + 1 ))
 done
 sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
+sudo systemctl enable pipewire pipewire-pulse wireplumber
 sudo systemctl enable bluetooth.service
 sudo systemctl enable cups.service
 sudo sed -i 's/\bresolve\b/mdns_minimal [NOTFOUND=return] resolve/g' /etc/nsswitch.conf
