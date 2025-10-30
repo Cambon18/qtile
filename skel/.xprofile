@@ -6,6 +6,7 @@ feh --bg-fill --no-fehbg /usr/share/backgrounds/wallpaper.jpeg
 
 ## Lanzar polkit-gnome: necesario antes de Thunar y udiskie
 (sleep 0.5; /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1) &
+(sleep 0.7; xdg-user-dirs-update) &
 
 ## Lanzar demonios de escritorio básicos
 pgrep -x picom || picom -b &
