@@ -5,7 +5,7 @@ while [[ $i -le $n ]]
 do
 	yay --noconfirm -Sy $(head -n $i list-packages | tail -n 1)
 	i=$(( $i + 1 ))
-	echo "$((70+(($i*15)/$n)))" >/tmp/PRG
+	echo "$((41+(($i*47)/$n)))" >/tmp/PRG
 done
 sudo sed -i 's/\"qtile/\"\/usr\/bin\/qtile/g' /usr/lib/udev/rules.d/99-qtile.rules
 sudo sed -i 's/\bqtile start\b/dbus-run-session qtile start/g' /usr/share/xsessions/qtile.desktop
