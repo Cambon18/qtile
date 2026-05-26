@@ -21,7 +21,7 @@ sudo cp -rv skel /etc
 sudo mkdir -p /usr/share/backgrounds
 sudo mkdir -p /usr/share/slick-greeter/badges
 sudo cp imagenes/wallpaper.jpeg /usr/share/backgrounds/
-sudo cp imagenes/background.jpg /usr/share/backgrounds/
+sudo cp imagenes/background*.jpg /usr/share/backgrounds/
 sudo cp imagenes/cambonos.png /usr/share/pixmaps/
 sudo cp imagenes/qtile.png /usr/share/slick-greeter/badges/
 sudo cp imagenes/qtile-wayland.png /usr/share/slick-greeter/badges/
